@@ -23,6 +23,8 @@ func main() {
 	flag.StringVar(&logFormat, "logFormat", "rfc3339", "log format")
 	flag.Parse()
 
+	time.Sleep(10*time.Second)
+	
 	if net.ParseIP(bindAddress) == nil {
 		log.Fatalf("invalid ip: %s", bindAddress)
 	}
