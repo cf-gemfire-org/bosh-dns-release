@@ -58,6 +58,7 @@ func main() {
 }
 
 func mainExitCode() int {
+	time.Sleep(5*time.Minute)
 	configPath, err := parseFlags()
 	if err != nil {
 		fmt.Fprintln(os.Stderr, err.Error())
